@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Omar Tamer | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#636565",
+            "primary-container": "#e2e2e2",
+            "on-primary-fixed": "#1a1c1c",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "surface-container-highest": "#33343c",
+            "surface-bright": "#383940",
+            "on-tertiary": "#2f3131",
+            "inverse-primary": "#5d5f5f",
+            "secondary-container": "#47464a",
+            "surface": "#12131a",
+            "on-surface-variant": "#c4c7c8",
+            "background": "#12131a",
+            "on-error-container": "#ffdad6",
+            "secondary-fixed-dim": "#c8c6c9",
+            "inverse-surface": "#e2e1eb",
+            "on-primary-fixed-variant": "#454747",
+            "inverse-on-surface": "#2f3037",
+            "on-surface": "#e2e1eb",
+            "outline-variant": "#444748",
+            "on-secondary-fixed": "#1b1b1e",
+            "error-container": "#93000a",
+            "surface-variant": "#33343c",
+            "error": "#ffb4ab",
+            "on-secondary-container": "#b6b4b8",
+            "secondary": "#c8c6c9",
+            "on-background": "#e2e1eb",
+            "on-secondary": "#303033",
+            "on-primary-container": "#636565",
+            "secondary-fixed": "#e4e1e5",
+            "outline": "#8e9192",
+            "on-error": "#690005",
+            "surface-dim": "#12131a",
+            "tertiary": "#ffffff",
+            "primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#454747",
+            "surface-container": "#1e1f26",
+            "primary-fixed-dim": "#c6c6c7",
+            "on-tertiary-fixed": "#1a1c1c",
+            "surface-container-lowest": "#0c0e14",
+            "primary-fixed": "#e2e2e2",
+            "tertiary-fixed": "#e2e2e2",
+            "surface-tint": "#c6c6c7",
+            "surface-container-high": "#282a31",
+            "on-secondary-fixed-variant": "#47464a",
+            "tertiary-container": "#e2e2e2",
+            "on-primary": "#2f3131",
+            "surface-container-low": "#1a1b22"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "24px",
+            "section-gap": "128px",
+            "margin": "64px",
+            "unit": "4px",
+            "container-max": "1200px"
+          },
+          "fontFamily": {
+            "body-base": ["Inter"],
+            "headline-md": ["Inter"],
+            "display-2xl": ["Inter"],
+            "body-sm": ["Inter"],
+            "display-xl": ["Inter"],
+            "label-caps": ["Inter"]
+          },
+          "fontSize": {
+            "body-base": ["16px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "display-2xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+            "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      background-color: #000000;
+      color: #e2e1eb;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .custom-border {
+      border-color: #000000;
+    }
+
+    @keyframes cursor-blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .typewriter-cursor {
+      animation: cursor-blink 1s step-end infinite;
+    }
+
+    /* Custom scrollbar for modal mini-blog */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #080808;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 9999px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #3f3f46;
+    }
+
+    /* Mobile menu transitions */
+    #mobile-menu {
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    }
+
+    #hamburger-line1,
+    #hamburger-line2,
+    #hamburger-line3 {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    }
+
+    /* Mobile specific branding text collapse when menu is open */
+    @media (max-width: 767px) {
+      .logo-text-collapsed {
+        max-width: 0 !important;
+        opacity: 0 !important;
+        margin-left: 0 !important;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+
+<body class="font-body-base">
+  <!-- TopNavBar -->
+  <header class="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-md border-none">
+    <nav class="relative flex justify-between items-center px-6 md:px-12 py-6 w-full max-w-screen-2xl mx-auto">
+      <a href="#" class="flex items-center group text-xl font-black tracking-tighter text-zinc-100 select-none">
+        <!-- Dynamic Logo Icon (Acts as the 'O' in Omar Tamer) -->
+        <span class="relative flex items-center justify-center h-8 w-8 flex-shrink-0 z-10">
+          <svg
+            class="h-full w-full text-zinc-100 transition-all duration-700 ease-out group-hover:rotate-180 group-hover:scale-105"
+            viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="42" />
+            <circle cx="50" cy="50" r="22" />
+          </svg>
+        </span>
+
+        <!-- 'mar Tamer' sliding text, always visible on mobile, sliding-on-hover on desktop -->
+        <span id="logo-text"
+          class="overflow-hidden flex items-center transition-all duration-500 ease-in-out whitespace-nowrap font-bold text-zinc-100 max-w-[200px] opacity-100 ml-1.5 md:max-w-0 md:opacity-0 md:ml-0 group-hover:md:max-w-[200px] group-hover:md:opacity-100 group-hover:md:ml-1.5">
+          <span
+            class="transform transition-transform duration-500 ease-in-out translate-x-0 md:-translate-x-3 group-hover:md:translate-x-0">
+            mar Tamer
+          </span>
+        </span>
+      </a>
+      <div class="hidden md:flex gap-8">
+        <a class="font-body-base text-base font-bold text-zinc-100 hover:text-white transition-all duration-300 hover:scale-105"
+          href="#about">About</a>
+        <a class="font-body-base text-base font-bold text-zinc-100 hover:text-white transition-all duration-300 hover:scale-105"
+          href="#expertise">Skills</a>
+        <a class="font-body-base text-base font-bold text-zinc-100 hover:text-white transition-all duration-300 hover:scale-105"
+          href="#projects">Projects</a>
+        <a class="font-body-base text-base font-bold text-zinc-100 hover:text-white transition-all duration-300 hover:scale-105"
+          href="#contact">Contact</a>
+      </div>
+      <a href="cv/omar_tamer_resume.pdf" target="_blank"
+        class="hidden md:block font-body-base text-base font-bold px-6 py-2.5 bg-gradient-to-r from-[#A8A9AD] via-[#ededed] to-[#A8A9AD] text-black rounded-full hover:opacity-90 transition-all duration-300 active:scale-95 select-none">Resume</a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="menu-toggle"
+        class="flex md:hidden flex-col justify-center items-center w-10 h-10 gap-1.5 bg-black/40 border border-zinc-800 rounded-full text-zinc-400 hover:text-white transition-all cursor-pointer backdrop-blur-sm z-50">
+        <span class="w-5 h-[2px] bg-current rounded transition-all duration-300 origin-center"
+          id="hamburger-line1"></span>
+        <span class="w-5 h-[2px] bg-current rounded transition-all duration-300 origin-center"
+          id="hamburger-line2"></span>
+        <span class="w-5 h-[2px] bg-current rounded transition-all duration-300 origin-center"
+          id="hamburger-line3"></span>
+      </button>
+
+      <!-- Mobile Navigation Accordion Dropdown -->
+      <div id="mobile-menu"
+        class="absolute top-full left-0 right-0 max-h-0 overflow-hidden bg-black/95 backdrop-blur-lg border-b border-zinc-800 transition-all duration-300 ease-in-out md:hidden flex flex-col items-center py-0 opacity-0 pointer-events-none z-40">
+        <div class="w-full px-6 py-6 flex flex-col gap-5 items-center">
+          <a class="mobile-nav-link font-body-base text-base font-bold text-zinc-300 hover:text-white transition-all w-full text-center py-2.5 border-b border-zinc-900/60"
+            href="#about">About</a>
+          <a class="mobile-nav-link font-body-base text-base font-bold text-zinc-300 hover:text-white transition-all w-full text-center py-2.5 border-b border-zinc-900/60"
+            href="#expertise">Skills</a>
+          <a class="mobile-nav-link font-body-base text-base font-bold text-zinc-300 hover:text-white transition-all w-full text-center py-2.5 border-b border-zinc-900/60"
+            href="#projects">Projects</a>
+          <a class="mobile-nav-link font-body-base text-base font-bold text-zinc-300 hover:text-white transition-all w-full text-center py-2.5 border-b border-zinc-900/60"
+            href="#contact">Contact</a>
+          <a href="cv/omar_tamer_resume.pdf" target="_blank"
+            class="w-full text-center font-body-base text-base font-bold py-3 bg-gradient-to-r from-[#A8A9AD] via-[#ededed] to-[#A8A9AD] text-black rounded-full hover:opacity-90 transition-all duration-300 select-none active:scale-[0.98]">Resume</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center px-8 max-w-7xl mx-auto py-20 text-center">
+      <div class="space-y-8 flex flex-col items-center">
+        <h1
+          class="font-display-2xl text-[48px] sm:text-[64px] md:text-[80px] lg:text-[96px] max-w-5xl text-primary leading-[1.1] font-semibold flex items-center justify-center min-h-[55px] sm:min-h-[70px] md:min-h-[88px] lg:min-h-[105px]">
+          <span id="typewriter"
+            style="background: linear-gradient(to right, #A8A9AD, #ededed, #A8A9AD); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block;"></span>
+          <span class="typewriter-cursor text-[#ededed] ml-1 select-none font-light">|</span>
+        </h1>
+        <p class="font-body-base text-lg text-on-surface-variant max-w-2xl whitespace-pre-line leading-relaxed">
+          Software Engineer | Cybersecurity Engineer
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 pt-8">
+          <a class="bg-white text-black px-10 py-4 rounded-full font-label-caps text-label-caps tracking-widest uppercase hover:bg-zinc-200 transition-colors"
+            href="#projects">View Work</a>
+          <a class="border border-white/30 text-white px-10 py-4 rounded-full font-label-caps text-label-caps tracking-widest uppercase hover:bg-white hover:text-black transition-all"
+            href="#contact">Connect</a>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section class="px-8 py-32 max-w-7xl mx-auto border-t border-zinc-900" id="about">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <!-- Left Column: Header and Quick Profile -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="font-label-caps text-label-caps text-outline uppercase tracking-widest block">The Story</span>
+          <h2 class="font-display-xl text-4xl md:text-5xl text-primary leading-tight font-bold">
+            Bridging the gap between <span
+              class="bg-gradient-to-r from-[#A8A9AD] via-[#ededed] to-[#A8A9AD] bg-clip-text text-transparent">creation</span>
+            and <span
+              class="bg-gradient-to-r from-[#A8A9AD] via-[#ededed] to-[#A8A9AD] bg-clip-text text-transparent">defense</span>.
+          </h2>
+          <div class="h-1 w-20 bg-primary mt-4"></div>
+
+          <!-- Meta details block -->
+          <div class="pt-8 space-y-4 text-sm font-label-caps text-zinc-400">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-zinc-600" data-icon="location_on">location_on</span>
+              <span>Cairo, Egypt</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-zinc-600" data-icon="school">school</span>
+              <span>B.Sc. in Computer Science — Software Engineering Specialization</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-zinc-600" data-icon="badge">badge</span>
+              <span>24 Years Old — Software Engineer & SOC Analyst</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Narrative Storytelling -->
+        <div class="lg:col-span-7 space-y-6 font-body-base text-lg text-zinc-400 leading-relaxed">
+          <p>
+            My journey began in the vibrant heart of Cairo, Egypt, where an early obsession with how things work led me
+            to pursue a Bachelor’s degree in Computer Science. As I mastered the principles of software design and
+            distributed systems, I realized a fundamental truth: a system is only as powerful as it is secure.
+          </p>
+          <p>
+            At 23, I operate at the vital boundary where software engineering meets defensive security. By day, I design
+            clean, high-performance web applications; by night, I work in the trenches as a Cybersecurity SOC Analyst,
+            monitoring networks, hunting threats, and safeguarding critical digital assets.
+          </p>
+          <p class="text-zinc-200 font-medium">
+            My ultimate ambition is to pioneer the perfect intersection of code and security pioneering architectures
+            that are resilient by default, and engineering solutions that are secure by design from the very first line
+            of code.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Core Expertise Section -->
+    <section class="px-8 py-32 max-w-7xl mx-auto" id="expertise">
+      <div class="mb-16">
+        <h2 class="font-display-xl text-display-xl text-primary">Core Expertise</h2>
+        <div class="h-1 w-20 bg-primary mt-4"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Expertise Card 1: Software Engineering -->
+        <div
+          class="border border-zinc-800 p-8 hover:border-zinc-500 transition-all duration-300 bg-surface-container-low group rounded-2xl flex flex-col justify-between h-full">
+          <div>
+            <div class="flex justify-between items-center mb-6">
+              <span class="material-symbols-outlined text-4xl text-outline group-hover:text-white transition-colors"
+                data-icon="code">code</span>
+              <span class="text-xs text-zinc-500 font-label-caps tracking-widest uppercase">Backend / OOP</span>
+            </div>
+            <h3 class="font-label-caps text-lg font-bold text-primary uppercase mb-3">Software Engineering</h3>
+            <p class="font-body-sm text-zinc-400 mb-6 leading-relaxed">
+              Designing robust, scalable backends using modern languages and clean Object-Oriented methodologies.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-zinc-800/60">
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Node
+              JS (JavaScript)</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Python
+              Django</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Golang</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Java
+              (OOP)</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">C#
+              (OOP)</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">HTML5
+              / CSS3</span>
+          </div>
+        </div>
+
+        <!-- Expertise Card 2: Cybersecurity & SOC -->
+        <div
+          class="border border-zinc-800 p-8 hover:border-zinc-500 transition-all duration-300 bg-surface-container-low group rounded-2xl flex flex-col justify-between h-full">
+          <div>
+            <div class="flex justify-between items-center mb-6">
+              <span class="material-symbols-outlined text-4xl text-outline group-hover:text-white transition-colors"
+                data-icon="shield_lock">shield_lock</span>
+              <span class="text-xs text-zinc-500 font-label-caps tracking-widest uppercase">Security Operations</span>
+            </div>
+            <h3 class="font-label-caps text-lg font-bold text-primary uppercase mb-3">Cybersecurity &amp; SOC</h3>
+            <p class="font-body-sm text-zinc-400 mb-6 leading-relaxed">
+              Active host/network defense monitoring, log analysis, threat hunting, and modern threat remediation.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-zinc-800/60">
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Security
+              Operations</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">SIEM
+              Solutions</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Network
+              Security</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Web
+              Attacks Analysis</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Linux
+              &amp; Windows</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Networks</span>
+          </div>
+        </div>
+
+        <!-- Expertise Card 3: Databases & Infrastructure -->
+        <div
+          class="border border-zinc-800 p-8 hover:border-zinc-500 transition-all duration-300 bg-surface-container-low group rounded-2xl flex flex-col justify-between h-full">
+          <div>
+            <div class="flex justify-between items-center mb-6">
+              <span class="material-symbols-outlined text-4xl text-outline group-hover:text-white transition-colors"
+                data-icon="database">database</span>
+              <span class="text-xs text-zinc-500 font-label-caps tracking-widest uppercase">DevOps / Data</span>
+            </div>
+            <h3 class="font-label-caps text-lg font-bold text-primary uppercase mb-3">DevOps &amp; Database Systems</h3>
+            <p class="font-body-sm text-zinc-400 mb-6 leading-relaxed">
+              Packaging environments using containerization alongside robust structured relational database engines.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-zinc-800/60">
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Docker</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">PostgreSQL</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">MySQL</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">SQLite</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Software
+              Architecture</span>
+          </div>
+        </div>
+
+        <!-- Expertise Card 4: Languages & Marketing -->
+        <div
+          class="border border-zinc-800 p-8 hover:border-zinc-500 transition-all duration-300 bg-surface-container-low group rounded-2xl flex flex-col justify-between h-full">
+          <div>
+            <div class="flex justify-between items-center mb-6">
+              <span class="material-symbols-outlined text-4xl text-outline group-hover:text-white transition-colors"
+                data-icon="language">language</span>
+              <span class="text-xs text-zinc-500 font-label-caps tracking-widest uppercase">Global / Growth</span>
+            </div>
+            <h3 class="font-label-caps text-lg font-bold text-primary uppercase mb-3">Strategic &amp; Linguistics</h3>
+            <p class="font-body-sm text-zinc-400 mb-6 leading-relaxed">
+              Cross-functional skills in digital marketing frameworks combined with fluent multi-lingual communications.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-zinc-800/60">
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Digital
+              Marketing</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">Arabic
+              (Native)</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">English
+              (B2)</span>
+            <span
+              class="px-3 py-1.5 text-xs bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:text-white text-zinc-300 font-medium rounded transition-colors cursor-default">French
+              (B2)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Professional Experience Section -->
+    <section class="px-8 py-32 bg-surface-container-lowest" id="experience" style="background-color: #000000;">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-16">
+          <h2 class="font-display-xl text-display-xl text-primary">Professional Experience</h2>
+          <p class="font-label-caps text-label-caps text-outline uppercase tracking-widest mt-2">A timeline of technical
+            evolution</p>
+        </div>
+        <div class="relative space-y-12">
+          <!-- Timeline Line -->
+          <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-zinc-800 -translate-x-1/2 hidden md:block">
+          </div>
+          <!-- Item 1 -->
+          <div class="relative flex flex-col md:flex-row items-center justify-between">
+            <div class="hidden md:block w-[45%]"></div>
+            <div
+              class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 z-10 border-4 border-background">
+            </div>
+            <div class="w-full md:w-[45%] pl-8 md:pl-0">
+              <div class="border border-zinc-800 p-6 bg-surface-container-low rounded-2xl">
+                <span class="font-label-caps text-label-caps text-outline uppercase">October 2025 — Present</span>
+                <h4 class="font-headline-md text-headline-md text-primary mt-2">Cybersecurity SOC Analyst L1</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Triaging real-time security alerts,
+                  analyzing raw network traffic payloads, monitoring SIEM consoles, and investigating web attacks to
+                  actively defend critical enterprise assets.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="relative flex flex-col md:flex-row-reverse items-center justify-between">
+            <div class="hidden md:block w-[45%]"></div>
+            <div
+              class="absolute left-0 md:left-1/2 w-4 h-4 bg-zinc-700 rounded-full -translate-x-1/2 z-10 border-4 border-background">
+            </div>
+            <div class="w-full md:w-[45%] pl-8 md:pl-0">
+              <div class="border border-zinc-800 p-6 bg-surface-container-low rounded-2xl">
+                <span class="font-label-caps text-label-caps text-outline uppercase">2024 — 2025</span>
+                <h4 class="font-headline-md text-headline-md text-primary mt-2">Software Engineer & Systems Architect
+                </h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Designing and building concurrent,
+                  high-throughput microservices and API layers using Go, Python Django, and Node.js. Structuring robust
+                  databases (PostgreSQL/MySQL) and managing containerized pipelines with Docker.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="relative flex flex-col md:flex-row items-center justify-between">
+            <div class="hidden md:block w-[45%]"></div>
+            <div
+              class="absolute left-0 md:left-1/2 w-4 h-4 bg-zinc-700 rounded-full -translate-x-1/2 z-10 border-4 border-background">
+            </div>
+            <div class="w-full md:w-[45%] pl-8 md:pl-0">
+              <div class="border border-zinc-800 p-6 bg-surface-container-low rounded-2xl">
+                <span class="font-label-caps text-label-caps text-outline uppercase">2023 — 2024</span>
+                <h4 class="font-headline-md text-headline-md text-primary mt-2">Lead Developer — Clinic Management
+                  System (Graduation Project)</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Designed and engineered a modular,
+                  full-stack Clinic Management System as a Computer Science graduation project. Built robust relational
+                  database structures, implemented dynamic appointment scheduling modules, and integrated secure
+                  patient-doctor communication channels, earning academic distinction.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Selected Projects Section -->
+    <section class="px-8 py-32 max-w-7xl mx-auto" id="projects">
+      <div class="mb-16 text-center">
+        <h2 class="font-display-xl text-display-xl text-primary">Projects</h2>
+        <p class="font-label-caps text-label-caps text-outline uppercase tracking-widest mt-2">Building for resilience
+          and growth</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <div class="group cursor-pointer" data-project="clinic-management">
+          <div class="aspect-video bg-surface-container overflow-hidden mb-6 border border-zinc-800 rounded-2xl">
+            <img alt="Clinic management dashboard"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+              data-alt="A clean dark medical portal with scheduler grids, user role controls, and digital record metrics in medical teal."
+              src="cms.png" />
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-headline-md text-headline-md text-primary group-hover:underline underline-offset-4">Clinic
+                Management System</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-md">A professional, full-featured
+                medical operations platform enabling role-based scheduling and secure digital records.</p>
+            </div>
+            <span
+              class="font-label-caps text-label-caps px-3 py-1 border border-zinc-700 uppercase">Django/Python</span>
+          </div>
+        </div>
+        <!-- Project 2 (NEW: Cybersecurity SOC Analysis) -->
+        <div class="group cursor-pointer" data-project="soc-analysis">
+          <div class="aspect-video bg-surface-container overflow-hidden mb-6 border border-zinc-800 rounded-2xl">
+            <img alt="Cybersecurity SOC Analysis Architecture"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+              data-alt="Detailed network traffic monitoring flow, threat intelligence correlation steps, and security architecture nodes."
+              src="soc_architecture_diagram.png" />
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-headline-md text-headline-md text-primary group-hover:underline underline-offset-4">Cybersecurity SOC Analysis</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-md">Comprehensive security operations analysis capturing network payloads, security alerts, and full incident triage workflows.</p>
+            </div>
+            <span class="font-label-caps text-label-caps px-3 py-1 border border-zinc-700 uppercase">SOC / Security</span>
+          </div>
+        </div>
+        <!-- Project 3 (NEW: Event Management System) -->
+        <div class="group cursor-pointer" data-project="event-management">
+          <div class="aspect-video bg-surface-container overflow-hidden mb-6 border border-zinc-800 rounded-2xl">
+            <img alt="Event Management System Use Case Diagram"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+              data-alt="Detailed use case diagram depicting User and Guest interactions with the Event Management System."
+              src="event_usecase_diagram.png" />
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-headline-md text-headline-md text-primary group-hover:underline underline-offset-4">Event Management System</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-md">A professional, highly secure RESTful API built with Go and Gin allowing robust event registration, authentication, and permission filters.</p>
+            </div>
+            <span class="font-label-caps text-label-caps px-3 py-1 border border-zinc-700 uppercase">Go / Gin</span>
+          </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="group cursor-pointer" data-project="warehouse-management">
+          <div class="aspect-video bg-surface-container overflow-hidden mb-6 border border-zinc-800 rounded-2xl">
+            <img alt="Warehouse operations Use Case Diagram"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+              data-alt="Detailed use case diagram depicting Guest, Authenticated User, and Monitoring System interactions with the Warehouse Management System."
+              src="warehouse_usecase_diagram.png" />
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-headline-md text-headline-md text-primary group-hover:underline underline-offset-4">
+                Warehouse Management System API</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-md">A containerized logistics
+                system API designed for rapid product inventory tracking and transactional order locks.</p>
+            </div>
+            <span class="font-label-caps text-label-caps px-3 py-1 border border-zinc-700 uppercase">Go / Docker</span>
+          </div>
+        </div>
+        <!-- Project 5 (Hidden initially) -->
+        <div class="group cursor-pointer hidden project-hidden" data-project="job-portal">
+          <div class="aspect-video bg-surface-container overflow-hidden mb-6 border border-zinc-800 rounded-2xl">
+            <img alt="Job hiring timeline portal"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+              data-alt="Hiring dashboards containing recruitment pipeline streams, candidate profile pages, and salary index charts."
+              src="job.png" />
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-headline-md text-headline-md text-primary group-hover:underline underline-offset-4">Job
+                Portal Engine</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-md">A modern employment matchmaking
+                engine with dual dashboards and optimized relational listing databases.</p>
+            </div>
+            <span class="font-label-caps text-label-caps px-3 py-1 border border-zinc-700 uppercase">Django / SQL</span>
+          </div>
+        </div>
+        <!-- Project 5 (Hidden initially) -->
+        <div class="group cursor-pointer hidden project-hidden" data-project="learning-management">
+          <div class="aspect-video bg-surface-container overflow-hidden mb-6 border border-zinc-800 rounded-2xl">
+            <img alt="E-learning platform courses"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+              data-alt="Academic dashboards showcasing curriculum outlines, dynamic enrollment cards, and responsive classroom portals."
+              src="learn.png" />
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-headline-md text-headline-md text-primary group-hover:underline underline-offset-4">
+                Learning Management System</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-md">A dynamic lesson-delivery suite
+                featuring session-tracking enrollment workflows and fluid responsive user profiles.</p>
+            </div>
+            <span class="font-label-caps text-label-caps px-3 py-1 border border-zinc-700 uppercase">Django / CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- View More Projects Button -->
+      <div class="flex justify-center mt-16">
+        <button id="view-more-btn" class="border border-white/30 text-white px-10 py-4 rounded-full font-label-caps text-label-caps tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
+          View More Projects
+        </button>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="px-8 py-32 bg-surface-container-low border-t border-zinc-800 " id="contact"
+      style="background-color: #000000;">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-display-xl text-display-xl text-primary mb-8">Let's Work Together</h2>
+
+        <!-- Instant Channels -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <!-- WhatsApp Instant Link -->
+          <a href="https://wa.me/201066079353" target="_blank"
+            class="flex items-center gap-3 px-6 py-3 bg-zinc-900 hover:bg-[#25D366]/10 border border-zinc-800 hover:border-[#25D366]/40 rounded-full transition-all text-zinc-300 hover:text-[#25D366] font-body-base text-sm font-bold group select-none">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.588 2.015 14.116.993 11.5.993c-5.44 0-9.866 4.372-9.87 9.802 0 1.764.476 3.49 1.38 5.031l-.993 3.624 3.737-.981zm11.387-5.464c-.307-.154-1.817-.897-2.097-1-.28-.103-.483-.154-.686.154-.203.308-.787.994-.965 1.2-.177.205-.355.23-.662.077-.307-.155-1.298-.479-2.472-1.527-.913-.815-1.53-1.82-1.71-2.129-.18-.308-.019-.475.135-.629.138-.138.307-.359.462-.538.154-.18.206-.308.308-.513.102-.206.051-.385-.026-.539-.077-.154-.686-1.656-.94-2.266-.247-.595-.5-.514-.686-.524-.177-.008-.38-.01-.583-.01-.203 0-.533.077-.812.385-.28.308-1.067 1.043-1.067 2.54 0 1.498 1.092 2.943 1.245 3.149.153.205 2.15 3.282 5.207 4.601.727.314 1.291.502 1.732.643.73.232 1.395.199 1.92.121.585-.087 1.817-.743 2.071-1.462.254-.718.254-1.334.177-1.462-.077-.128-.28-.205-.587-.359z" />
+            </svg>
+            <span>WhatsApp</span>
+            <span class="material-symbols-outlined text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+              data-icon="north_east">north_east</span>
+          </a>
+
+          <!-- iMessage Instant Link -->
+          <a href="imessage://omarscareer002@icloud.com"
+            class="flex items-center gap-3 px-6 py-3 bg-zinc-900 hover:bg-[#007AFF]/10 border border-zinc-800 hover:border-[#007AFF]/40 rounded-full transition-all text-zinc-300 hover:text-[#007AFF] font-body-base text-sm font-bold group select-none">
+            <span class="material-symbols-outlined text-xl" data-icon="chat">chat</span>
+            <span>iMessage</span>
+            <span class="material-symbols-outlined text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+              data-icon="north_east">north_east</span>
+          </a>
+        </div>
+
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6 text-left">
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="0ab12c43-7911-4f09-adcd-4fcc2561f56c">
+          
+          <!-- Routing Configurations -->
+          <input type="hidden" name="subject" value="New Portfolio Message from OmarTamer.com">
+          <input type="hidden" name="cc" value="omarscareer002@gmail.com,omarscareer002@outlook.com">
+          <input type="hidden" name="from_name" value="Portfolio Notifications">
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Name</label>
+              <input
+                class="w-full bg-surface-container border border-zinc-800 p-4 text-primary focus:border-white focus:ring-0 transition-colors rounded-xl"
+                placeholder="John Doe" type="text" name="name" required />
+            </div>
+            <div class="space-y-2">
+              <label class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Email</label>
+              <input
+                class="w-full bg-surface-container border border-zinc-800 p-4 text-primary focus:border-white focus:ring-0 transition-colors rounded-xl"
+                placeholder="john@example.com" type="email" name="email" required />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Message</label>
+            <textarea
+              class="w-full bg-surface-container border border-zinc-800 p-4 text-primary focus:border-white focus:ring-0 transition-colors rounded-xl"
+              placeholder="Describe your project goals..." rows="6" name="message" required></textarea>
+          </div>
+          <button
+            class="w-full bg-white text-black py-6 font-label-caps text-label-caps tracking-widest uppercase hover:opacity-90 transition-opacity active:scale-[0.99] transition-transform rounded-full cursor-pointer"
+            type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="w-full border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-black">
+    <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto gap-4">
+      <div class="text-xs font-bold text-zinc-400 uppercase tracking-widest">© 2026 Omar Tamer. ALL RIGHTS RESERVED.
+      </div>
+      <div class="flex gap-8">
+        <a class="font-inter text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors opacity-80 hover:opacity-100"
+          href="https://github.com/omartamer002">Github</a>
+        <a class="font-inter text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors opacity-80 hover:opacity-100"
+          href="https://www.linkedin.com/in/omartamer002">LinkedIn</a>
+        <a class="font-inter text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors opacity-80 hover:opacity-100"
+          href="https://www.instagram.com/omarscareer/">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div id="project-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 opacity-0 pointer-events-none transition-all duration-300 select-none">
+    <!-- Backdrop -->
+    <div id="modal-backdrop" class="absolute inset-0 bg-black/90 backdrop-blur-md"></div>
+
+    <!-- Modal Card -->
+    <div
+      class="relative w-full max-w-4xl bg-[#080808] border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] transform scale-95 transition-transform duration-300 z-10">
+      <!-- Close Button -->
+      <button id="modal-close"
+        class="absolute top-6 right-6 z-20 flex items-center justify-center w-10 h-10 bg-black/60 border border-zinc-800 text-zinc-400 hover:text-white rounded-full transition-colors backdrop-blur-sm cursor-pointer">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+
+      <!-- Modal Content (Scrollable) -->
+      <div class="overflow-y-auto custom-scrollbar flex-1 p-6 md:p-12 text-left">
+        <!-- Header Image -->
+        <div class="aspect-video w-full bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden mb-8">
+          <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Meta Details -->
+        <div class="flex flex-wrap gap-x-8 gap-y-4 mb-6 pb-6 border-b border-zinc-800/60">
+          <div>
+            <span class="text-xs text-zinc-500 font-label-caps uppercase tracking-wider block mb-1">Role</span>
+            <span id="modal-role" class="text-sm text-zinc-300 font-medium font-body-base"></span>
+          </div>
+          <div>
+            <span class="text-xs text-zinc-500 font-label-caps uppercase tracking-wider block mb-1">Timeline</span>
+            <span id="modal-timeline" class="text-sm text-zinc-300 font-medium font-body-base"></span>
+          </div>
+          <div>
+            <span class="text-xs text-zinc-500 font-label-caps uppercase tracking-wider block mb-1">Stack</span>
+            <span id="modal-stack" class="text-sm text-zinc-300 font-medium font-body-base"></span>
+          </div>
+          <div>
+            <span class="text-xs text-zinc-500 font-label-caps uppercase tracking-wider block mb-1">Repository</span>
+            <a id="modal-link" href="" target="_blank"
+              class="text-sm text-[#A8A9AD] hover:text-white font-medium font-body-base flex items-center gap-1 transition-colors group select-none">
+              <span>GitHub Repository</span>
+              <span
+                class="material-symbols-outlined text-xs transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                data-icon="north_east">north_east</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Body Text -->
+        <div class="space-y-6">
+          <h3 id="modal-title" class="font-display-xl text-3xl md:text-4xl text-primary leading-tight"></h3>
+          <p id="modal-subtitle" class="font-label-caps text-label-caps text-outline uppercase tracking-wider"></p>
+
+          <div class="border-t border-zinc-800/40 my-6 pt-6">
+            <p id="modal-desc" class="font-body-base text-base text-zinc-300 leading-relaxed mb-6"></p>
+            <div class="p-6 bg-zinc-950 border border-zinc-900/60 rounded-2xl">
+              <h4 class="font-label-caps text-xs text-zinc-400 uppercase tracking-widest mb-3">Technical Breakdown &amp;
+                Deep-Dive</h4>
+              <div id="modal-blog" class="font-body-sm text-sm text-zinc-400 leading-relaxed space-y-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Typewriter Animation Loop
+      const el = document.getElementById("typewriter");
+      if (el) {
+        const text = "Code. Secure. Scale.";
+        let i = 0;
+        let isDeleting = false;
+
+        function play() {
+          if (!isDeleting) {
+            el.textContent = text.slice(0, i + 1);
+            i++;
+
+            if (i === 5) {
+              setTimeout(play, 850); // Pause after "Code."
+            } else if (i === 13) {
+              setTimeout(play, 850); // Pause after "Secure."
+            } else if (i === text.length) {
+              isDeleting = true;
+              setTimeout(play, 3500); // Long pause at "Code. Secure. Scale."
+            } else {
+              setTimeout(play, 90 + Math.random() * 50); // Natural typing speed
+            }
+          } else {
+            el.textContent = text.slice(0, i - 1);
+            i--;
+
+            if (i === 0) {
+              isDeleting = false;
+              setTimeout(play, 600); // Pause before restarting the cycle
+            } else {
+              setTimeout(play, 45); // Fast backspacing speed
+            }
+          }
+        }
+        play();
+      }
+
+      // 2. Interactive Project Mini-Blog Modal Handler
+      const modal = document.getElementById("project-modal");
+      const backdrop = document.getElementById("modal-backdrop");
+      const closeBtn = document.getElementById("modal-close");
+
+      const mImg = document.getElementById("modal-img");
+      const mRole = document.getElementById("modal-role");
+      const mTimeline = document.getElementById("modal-timeline");
+      const mStack = document.getElementById("modal-stack");
+      const mLink = document.getElementById("modal-link");
+      const mTitle = document.getElementById("modal-title");
+      const mSubtitle = document.getElementById("modal-subtitle");
+      const mDesc = document.getElementById("modal-desc");
+      const mBlog = document.getElementById("modal-blog");
+
+      const projectData = {
+        "clinic-management": {
+          title: "Clinic Management System",
+          subtitle: "Full-Featured Django Medical Operations Platform",
+          role: "Lead Fullstack Developer",
+          timeline: "Graduation Project (2024)",
+          stack: "Python / Django / SQLite",
+          link: "https://github.com/omartamer002/Clinic-Management-System",
+          img: "cms.png",
+          desc: "Designed and engineered a modular, full-stack Clinic Management System as a Computer Science graduation project. The platform coordinates patient scheduling, doctor matching slots, and secure clinical records, earning academic distinction.",
+          blog: "Ingesting complex medical schedules requires strict conflict resolution. We built a robust validation pipeline in Django where doctor availabilities are checked against overlapping ranges inside transaction blocks to eliminate race conditions. Built secure user-role access layers distinguishing Doctors, Patients, and Administrators, and designed sandboxed chat channels using structured client APIs for pre-appointment clinical screening."
+        },
+        "soc-analysis": {
+          title: "Cybersecurity SOC Analysis",
+          subtitle: "Network Traffic & Threat Intelligence Analysis",
+          role: "SOC Analyst",
+          timeline: "October 2025",
+          stack: "Wireshark / Kibana / SIEM / OSINT",
+          link: "#",
+          img: "soc_architecture_diagram.png",
+          desc: "An in-depth security operations investigation focused on full packet analysis, threat intelligence mapping, and incident mitigation design.",
+          blog: `<ul class="list-disc pl-5 space-y-2 text-zinc-300">
+            <li><strong>Network Traffic Analysis:</strong> Investigated raw network traffic payloads using Wireshark across two large PCAP files to trace threat actor footprints and pinpoint exploit channels.</li>
+            <li><strong>SIEM & Event Monitoring:</strong> Leveraged SGUIL, SQUERT, and Kibana dashboard environments to ingest active network logs, execute security alert analysis, and correlate multi-vector logs.</li>
+            <li><strong>Threat Intelligence:</strong> Conducted thorough indicator assessments utilizing external platforms including VirusTotal and Cisco Talos to map malicious IP addresses and file reputational history.</li>
+            <li><strong>Malware Analysis:</strong> Evaluated unknown executables and files to extract exact indicators of compromise (IOCs) and identify threat patterns.</li>
+            <li><strong>Phishing Forensics:</strong> Analyzed header routing, attachments, and links within suspicious emails utilizing Encryptomatic, identifying attack patterns and social engineering techniques.</li>
+            <li><strong>Incident Documentation:</strong> Authored standard-compliant incident triage reports detailing active IOC footprints and concrete remediation steps to mitigate security exposure.</li>
+          </ul>`
+        },
+        "event-management": {
+          title: "Event Management System",
+          subtitle: "Secure, High-Performance RESTful Event Engine",
+          role: "Lead Backend Developer",
+          timeline: "Go/Gin Project (2025)",
+          stack: "Go / Gin / SQLite / JWT",
+          link: "#",
+          img: "event_usecase_diagram.png",
+          desc: "A highly robust RESTful API built in Go and Gin Gonic. Features secure JSON Web Token authentication, bcrypt-protected password hashes, and strict resource ownership filters.",
+          blog: `<div class="space-y-6 text-zinc-300 font-body-sm">
+            <div>
+              <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2">🚀 Core Architectural Features</h4>
+              <ul class="list-disc pl-5 space-y-1.5">
+                <li><strong>Secure Authentication:</strong> User signup and login backed by JWT token issuance and adaptive bcrypt hashing.</li>
+                <li><strong>Ownership Authorization:</strong> Middleware-enforced authorization rules protecting event write actions (only creators can modify/delete).</li>
+                <li><strong>Transactional Registrations:</strong> Clean user enrollment tracking into scheduled events with full cancellation support.</li>
+                <li><strong>Standardized Architecture:</strong> Clean segregation separating models, routes, custom auth middlewares, and DB connection layers.</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2">🛣️ API Router Map</h4>
+              <div class="overflow-x-auto border border-zinc-800 rounded-xl bg-zinc-950/60">
+                <table class="w-full text-xs text-left border-collapse">
+                  <thead>
+                    <tr class="border-b border-zinc-800 bg-zinc-900/60 font-semibold text-zinc-400">
+                      <th class="px-4 py-2">Method</th>
+                      <th class="px-4 py-2">Endpoint</th>
+                      <th class="px-4 py-2">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-zinc-900 text-zinc-300">
+                    <tr><td class="px-4 py-2 font-bold text-[#A8A9AD]">POST</td><td class="px-4 py-2 font-mono text-zinc-400">/signup</td><td class="px-4 py-2">Create new user account</td></tr>
+                    <tr><td class="px-4 py-2 font-bold text-[#A8A9AD]">POST</td><td class="px-4 py-2 font-mono text-zinc-400">/login</td><td class="px-4 py-2">Authenticate and retrieve JWT</td></tr>
+                    <tr><td class="px-4 py-2 font-bold text-green-500">GET</td><td class="px-4 py-2 font-mono text-zinc-400">/events</td><td class="px-4 py-2">Retrieve list of all events</td></tr>
+                    <tr><td class="px-4 py-2 font-bold text-green-500">GET</td><td class="px-4 py-2 font-mono text-zinc-400">/events/:id</td><td class="px-4 py-2">Get specific event details</td></tr>
+                    <tr class="bg-zinc-950/40"><td class="px-4 py-2 font-bold text-orange-500">POST</td><td class="px-4 py-2 font-mono text-zinc-400">/events</td><td class="px-4 py-2">Create new event (Protected)</td></tr>
+                    <tr class="bg-zinc-950/40"><td class="px-4 py-2 font-bold text-blue-500">PUT</td><td class="px-4 py-2 font-mono text-zinc-400">/events/:id</td><td class="px-4 py-2">Update event (Owner only)</td></tr>
+                    <tr class="bg-zinc-950/40"><td class="px-4 py-2 font-bold text-red-500">DELETE</td><td class="px-4 py-2 font-mono text-zinc-400">/events/:id</td><td class="px-4 py-2">Delete event (Owner only)</td></tr>
+                    <tr class="bg-zinc-950/40"><td class="px-4 py-2 font-bold text-orange-500">POST</td><td class="px-4 py-2 font-mono text-zinc-400">/events/:id/register</td><td class="px-4 py-2">Register user for event</td></tr>
+                    <tr class="bg-zinc-950/40"><td class="px-4 py-2 font-bold text-red-500">DELETE</td><td class="px-4 py-2 font-mono text-zinc-400">/events/:id/register</td><td class="px-4 py-2">Cancel event registration</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>`
+        },
+        "warehouse-management": {
+          title: "Warehouse Management System API",
+          subtitle: "Secure, high-throughput logistics inventory engine",
+          role: "Backend Developer",
+          timeline: "3 Months (2025)",
+          stack: "Go / Gin / SQLite / Docker",
+          link: "https://github.com/omartamer002/Warehouse-Management-System",
+          img: "warehouse_usecase_diagram.png",
+          desc: "A containerized logistics system API designed for rapid product movements and transaction tracking. Built with Go and the Gin framework, the utility facilitates transactional ordering and real-time inventory count operations.",
+          blog: "Sustaining concurrent inventory updates requires high-performance concurrency safeguards. Built using Go's fast native routing pipelines and Gin, the platform implements database transaction locks to protect product state counts from overlapping reads/writes. Enforced strict password encryption standards with Bcrypt hashing algorithms and fully containerized the workspace via Docker configurations for bulletproof, cross-platform dev operations."
+        },
+        "job-portal": {
+          title: "Job Portal Engine",
+          subtitle: "Modern hiring platform with complex search algorithms",
+          role: "Full Stack Engineer",
+          timeline: "3 Months (2025)",
+          stack: "Python / Django / PostgreSQL",
+          link: "https://github.com/omartamer002/Job-Portal",
+          img: "job.png",
+          desc: "A modern employment matchmaking engine built with Django, connecting recruiters with applicants via custom profiles, job posting slots, and advanced filters.",
+          blog: "Optimizing matchmaking queries requires efficient database indexing. Built dual-registration pipelines (Employers vs. Job Seekers) with isolated controls. Implemented sophisticated filtering mechanisms inside Django's ORM layer that parse active listings by category, salary, and experience tags, yielding sub-millisecond query results even under large volumes of data rows."
+        },
+        "learning-management": {
+          title: "Learning Management System",
+          subtitle: "High-performance EdTech course delivery environment",
+          role: "Full Stack Developer",
+          timeline: "2 Months (2025)",
+          stack: "Python / Django / CSS3",
+          link: "https://github.com/omartamer002/Learning-Management-System",
+          img: "learn.png",
+          desc: "A comprehensive EdTech solution providing rapid academic lesson onboarding, enrollment pipelines, student metrics, and customized curriculum streams.",
+          blog: "Sustaining responsive student dashboards requires efficient session management and caching models. I structured Django session tracking to capture progress milestones dynamically without redundant database triggers, designed an engaging responsive workspace using custom CSS grids and premium dark-mode variables, and integrated robust multi-criteria search engines for fluid course index parsing."
+        }
+      };
+
+      document.querySelectorAll("[data-project]").forEach(card => {
+        card.addEventListener("click", () => {
+          const id = card.getAttribute("data-project");
+          const data = projectData[id];
+          if (!data) return;
+
+          mImg.src = data.img;
+          mImg.alt = data.title;
+          mRole.textContent = data.role;
+          mTimeline.textContent = data.timeline;
+          mStack.textContent = data.stack;
+          mLink.href = data.link;
+          mTitle.textContent = data.title;
+          mSubtitle.textContent = data.subtitle;
+          mDesc.textContent = data.desc;
+          mBlog.innerHTML = data.blog;
+
+          // Show modal with transitions
+          modal.classList.remove("opacity-0", "pointer-events-none");
+          const cardContainer = modal.querySelector(".relative");
+          cardContainer.classList.remove("scale-95");
+          cardContainer.classList.add("scale-100");
+          document.body.classList.add("overflow-hidden");
+        });
+      });
+
+      // 4. View More Projects Toggle Logic
+      const viewMoreBtn = document.getElementById("view-more-btn");
+      const hiddenProjects = document.querySelectorAll(".project-hidden");
+      let isShowingAll = false;
+
+      if (viewMoreBtn && hiddenProjects.length > 0) {
+        viewMoreBtn.addEventListener("click", () => {
+          isShowingAll = !isShowingAll;
+          hiddenProjects.forEach(proj => {
+            if (isShowingAll) {
+              proj.classList.remove("hidden");
+              proj.classList.add("animate-fade-in");
+            } else {
+              proj.classList.add("hidden");
+              proj.classList.remove("animate-fade-in");
+            }
+          });
+          viewMoreBtn.textContent = isShowingAll ? "View Less Projects" : "View More Projects";
+        });
+      }
+
+      function closeModal() {
+        modal.classList.add("opacity-0", "pointer-events-none");
+        const cardContainer = modal.querySelector(".relative");
+        cardContainer.classList.remove("scale-100");
+        cardContainer.classList.add("scale-95");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      closeBtn.addEventListener("click", closeModal);
+      backdrop.addEventListener("click", closeModal);
+
+      // Close on Escape key press
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+
+      // 3. Mobile Hamburger Menu Toggle Action
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const logoText = document.getElementById("logo-text");
+      const line1 = document.getElementById("hamburger-line1");
+      const line2 = document.getElementById("hamburger-line2");
+      const line3 = document.getElementById("hamburger-line3");
+
+      let isMenuOpen = false;
+
+      function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+          mobileMenu.classList.remove("opacity-0", "pointer-events-none");
+          mobileMenu.style.maxHeight = "400px";
+          mobileMenu.style.opacity = "1";
+
+          // Collapse logo branding text on mobile immediately
+          if (logoText) {
+            logoText.classList.add("logo-text-collapsed");
+          }
+
+          // Premium X-icon transforms
+          line1.style.transform = "rotate(45deg) translate(5px, 5px)";
+          line2.style.opacity = "0";
+          line3.style.transform = "rotate(-45deg) translate(5px, -5px)";
+        } else {
+          mobileMenu.style.maxHeight = "0";
+          mobileMenu.style.opacity = "0";
+
+          // Restore logo branding text on mobile immediately
+          if (logoText) {
+            logoText.classList.remove("logo-text-collapsed");
+          }
+
+          // Reset transforms
+          line1.style.transform = "none";
+          line2.style.opacity = "1";
+          line3.style.transform = "none";
+
+          setTimeout(() => {
+            if (!isMenuOpen) {
+              mobileMenu.classList.add("opacity-0", "pointer-events-none");
+            }
+          }, 400);
+        }
+      }
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleMenu();
+        });
+
+        // Auto-close menu when a mobile nav link is clicked
+        document.querySelectorAll(".mobile-nav-link").forEach(link => {
+          link.addEventListener("click", () => {
+            if (isMenuOpen) toggleMenu();
+          });
+        });
+
+        // Auto-close when clicking outside of the header context
+        document.addEventListener("click", (e) => {
+          if (isMenuOpen && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+            toggleMenu();
+          }
+        });
+      }
+
+      // 5. Premium AJAX Form Submission with Glassmorphic Toast Notifications
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          
+          const submitBtn = contactForm.querySelector("button[type='submit']");
+          const originalBtnText = submitBtn.textContent;
+          
+          // Disable button and show sending state with a premium spinner
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `
+            <span class="flex items-center justify-center gap-2">
+              <svg class="animate-spin h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Sending Message...
+            </span>
+          `;
+          
+          // Extract form data
+          const formData = new FormData(contactForm);
+          const data = {};
+          formData.forEach((value, key) => {
+            data[key] = value;
+          });
+
+          // Define endpoint
+          const endpoint = contactForm.getAttribute("action");
+          
+          try {
+            const response = await fetch(endpoint, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+              },
+              body: JSON.stringify(data)
+            });
+            
+            if (response.ok) {
+              showToast("Message sent successfully! I will get back to you shortly.", "success");
+              contactForm.reset();
+            } else {
+              const errorData = await response.json().catch(() => ({}));
+              throw new Error(errorData.message || "Server responded with an error.");
+            }
+          } catch (error) {
+            console.error("Form submission error:", error);
+            showToast("Failed to send message. Please try again or reach out directly.", "error");
+          } finally {
+            // Restore button state
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+          }
+        });
+      }
+
+      // Premium Glassmorphic Toast Notification System
+      function showToast(message, type = "success") {
+        // Remove existing toast if present
+        const existingToast = document.getElementById("custom-toast");
+        if (existingToast) existingToast.remove();
+        
+        const toast = document.createElement("div");
+        toast.id = "custom-toast";
+        toast.className = `fixed bottom-8 right-8 z-50 flex items-center gap-3 px-6 py-4 rounded-2xl border backdrop-blur-md shadow-2xl transition-all duration-500 transform translate-y-10 opacity-0 font-body-base text-sm select-none ${
+          type === "success" 
+            ? "bg-emerald-950/80 border-emerald-500/30 text-emerald-200" 
+            : "bg-rose-950/80 border-rose-500/30 text-rose-200"
+        }`;
+        
+        const icon = document.createElement("span");
+        icon.className = "material-symbols-outlined text-xl";
+        icon.textContent = type === "success" ? "check_circle" : "error";
+        
+        const text = document.createElement("span");
+        text.textContent = message;
+        
+        toast.appendChild(icon);
+        toast.appendChild(text);
+        document.body.appendChild(toast);
+        
+        // Trigger transition
+        setTimeout(() => {
+          toast.classList.remove("translate-y-10", "opacity-0");
+        }, 10);
+        
+        // Auto-remove toast after 5 seconds
+        setTimeout(() => {
+          toast.classList.add("translate-y-10", "opacity-0");
+          setTimeout(() => toast.remove(), 500);
+        }, 5000);
+      }
+    });
+  </script>
+</body>
+
+</html>
